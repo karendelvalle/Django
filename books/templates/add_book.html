@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a new Books Title and review</h1>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+    <form action="add" method="POST">
+        {% csrf_token%}
+        <p>Book title: <input type="text" name="title"></p>
+        <p>Author:</p>
+        <p>Chooose from the list <select name="author" id="">
+            <option value="1">Author[1]</option>
+            <option value="2">Author[2]</option>
+            <option value="3">Author[3]</option>
+        </select></p>
+        <p>Or add a new author <input type="text" name="author" id=""></p>
+        <p>Review: </p>
+        <input type="text" name="description" id="">
+        <p>Rating: <input type="number" min="1" max="5" name="rating"></p>
+        <input type="submit" value="Add book and Review">
+    </form>
+</body>
+</html>
